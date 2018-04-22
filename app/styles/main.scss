@@ -2,6 +2,14 @@
 $black:   #191919;
 $sun-yellow: #fedd23;
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 body {
   width: 100%;
   max-width: 1200px;
@@ -13,7 +21,7 @@ body {
   height: 95px;
   margin: 52px auto 0 auto;
 
-  .logo_img {
+  &_img {
     width: 100%;
     height: auto;
   }
@@ -21,8 +29,7 @@ body {
 
 .main-title {
   margin: 61px auto 0 auto;
-  font-family: 'avalonbold';
-  font-size: 59px;
+  font: 59px 'avalonbold';
   text-align: center;
   color: #191919;
   letter-spacing: 0.8px;
@@ -33,10 +40,50 @@ body {
 
 .subtitle {
   color: #191919;
-  font-family: "work_sansregular";
-  font-size: 24px;
+  font: 24px "work_sansregular";
   text-align: center;
   width: 770px;
   margin: 40px auto 0 auto;
   line-height: 43px;
+}
+
+.form {
+  @include clearfix;
+  margin: 140px auto 0 auto;
+  padding-top: 75px;
+  max-width: 947px;
+}
+
+.form {
+  &__input {
+    width: 99%;
+    height: 45px;
+    margin: 20px 0 30px 0;
+  }
+  &__label {
+    width: 100%;
+    font: 14px 'work_sansmedium';
+    color: #4e4e4e;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  &__textarea {
+    width: 98.4%;
+    margin: 20px 0 30px 0;
+    resize: none;
+    float: right;
+  }
+}
+
+.form-block {
+  width: 47.3%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  &--left{
+    float: left;
+  }
+  &--right{
+    float: right;
+  }
 }
