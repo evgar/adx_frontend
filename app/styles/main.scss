@@ -1,10 +1,23 @@
+@import "path/to/file";
+
 body {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
   width: 245px;
   height: 95px;
-  margin: 47px 0 0 53px;
+  margin: 45px 0 0 0px;
+}
+
+.logo_img {
+  width: 100%;
+  height: auto;
+}
+
+.main-title {
+
 }
