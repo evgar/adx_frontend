@@ -62,11 +62,13 @@ body {
     border: 1px solid #dcdcdc;
 
     &--cv {
-      width: 0;
-      height: 0;
+      top: -46px;
+      left: 350px;
+      width: 48px;
+      height: 8px;
       opacity: 0;
       overflow: hidden;
-      position: absolute;
+      position: relative;
       z-index: -1;
       max-width: 80%;
       font-size: 1.25rem;
@@ -75,7 +77,6 @@ body {
       white-space: nowrap;
       cursor: pointer;
       display: inline-block;
-      overflow: hidden;
       padding: 0.625rem 1.25rem;
       margin: 0;
     }
@@ -86,35 +87,34 @@ body {
     color: #4e4e4e;
     text-transform: uppercase;
     display: inline-block;
-    :first-child {
-      color: red;
-    }
-    :nth-child(2) {
-      display: block;
-      width: 97%;
-      height: 100%;
-      font: 14px work_sansregular;
-      text-transform: initial;
-      padding: 14px 0 0 14px;
-    }
-    :nth-child(3) {
-      position: relative;
-      top: -54px;
-      left: 78%;
-      font-size: 12px;
-      padding: 8px 20px;
-      background: #FCDB3D;
-    }
+      :first-child {
+        position: relative;
+        top: -42px;
+      }
+      :nth-child(2) {
+
+        display: block;
+        width: 19%;
+        height: 47%;
+        font: 14px work_sansregular;
+        text-transform: initial;
+        padding: 0 0 0 14px;
+        margin: -3px 0 0px 0;
+      }
+      :nth-child(3) {
+        position: relative;
+        top: -23px;
+        left: 78%;
+        font-size: 12px;
+        padding: 8px 20px;
+        background: #FCDB3D;
+      }
     &--cv {
-      width: 100%;
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-overflow: ellipsis;
+      width: 100%;;
       white-space: nowrap;
       cursor: pointer;
       display: inline-block;
-      overflow: hidden;
-      margin: 40px 0 0 0;
+      margin: 39px 0 0 0;
       height: 48px;
       border: 1px solid #dcdcdc;
     }
