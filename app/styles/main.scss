@@ -58,7 +58,27 @@ body {
   &__input {
     width: 99%;
     height: 45px;
-    margin: 20px 0 30px 0;
+    margin: 22px 0 30px 0;
+    border: 1px solid #dcdcdc;
+
+    &--cv {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      max-width: 80%;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-block;
+      overflow: hidden;
+      padding: 0.625rem 1.25rem;
+      margin: 0;
+    }
   }
   &__label {
     width: 100%;
@@ -66,12 +86,45 @@ body {
     color: #4e4e4e;
     text-transform: uppercase;
     display: inline-block;
+    :first-child {
+      color: red;
+    }
+    :nth-child(2) {
+      display: block;
+      width: 97%;
+      height: 100%;
+      font: 14px work_sansregular;
+      text-transform: initial;
+      padding: 14px 0 0 14px;
+    }
+    :nth-child(3) {
+      position: relative;
+      top: -54px;
+      left: 78%;
+      font-size: 12px;
+      padding: 8px 20px;
+      background: #FCDB3D;
+    }
+    &--cv {
+      width: 100%;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-block;
+      overflow: hidden;
+      margin: 40px 0 0 0;
+      height: 48px;
+      border: 1px solid #dcdcdc;
+    }
   }
   &__textarea {
     width: 98.4%;
     margin: 20px 0 30px 0;
     resize: none;
     float: right;
+    border: 1px solid #dcdcdc;
   }
 }
 
