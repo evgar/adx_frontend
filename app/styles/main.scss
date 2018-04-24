@@ -10,6 +10,13 @@ $sun-yellow: #fedd23;
   }
 }
 
+.clear {
+  height:0px !important;
+  clear:both;
+  margin:0 !important;
+  padding:0 !important;
+}
+
 body {
   width: 100%;
   max-width: 1200px;
@@ -133,10 +140,51 @@ body {
   border: none;
   padding: 0;
   margin: 0;
-  &--left{
+
+  &--left {
     float: left;
   }
-  &--right{
+
+  &--right {
     float: right;
+  }
+
+  &--graduated {
+    margin: 33px 0 0 -2px;
+    width: 27%;
+    height: 73px;
+  }
+}
+
+.list-radio {
+  @include clearfix;
+  &__item {
+    display: block;
+    width: 45%;
+    float: left;
+  }
+  &__answer {
+    display: none;
+    &:not(checked) + label:before {
+      background-position: -36px 0;
+    }
+    &:checked + label:before {
+      background-position: 0 0;
+    }
+  }
+  &__point {
+    cursor: pointer;
+    margin: 0 5px 4.5px 0.5%;
+    text-shadow: 0 1px #000;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 26px;
+      width: 26px;
+      background: url(../images/options.png) no-repeat;
+      position: relative;
+      top: 5px;
+      left: -5px;
+    }
   }
 }
