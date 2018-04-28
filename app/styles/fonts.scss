@@ -40,5 +40,16 @@
   url('../fonts/lg-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'work_sanslight';
+  src: url('../fonts/worksans-light-webfont.eot');
+  src: url('../fonts/worksans-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/worksans-light-webfont.woff2') format('woff2'),
+  url('../fonts/worksans-light-webfont.woff') format('woff'),
+  url('../fonts/worksans-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 
 }
