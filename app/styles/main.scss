@@ -36,7 +36,7 @@ body {
 
 .main-title {
   margin: 61px auto 0 auto;
-  font: 59px 'avalonbold';
+  font: 59px avalonbold;
   text-align: center;
   color: #191919;
   letter-spacing: 0.8px;
@@ -47,7 +47,7 @@ body {
 
 .subtitle {
   color: #191919;
-  font: 24px "work_sansregular";
+  font: 24px work_sansregular;
   text-align: center;
   width: 770px;
   margin: 40px auto 0 auto;
@@ -90,7 +90,7 @@ body {
   }
   &__label {
     width: 100%;
-    font: 14px 'work_sansmedium';
+    font: 14px work_sansmedium;
     color: #4e4e4e;
     text-transform: uppercase;
     display: inline-block;
@@ -140,7 +140,7 @@ body {
   padding: 0;
   margin: 0;
   &__description {
-    font: 12px 'work_sanslight';
+    font: 12px work_sanslight;
     color: #979797;
     margin: 19px 0 0 0;
   }
@@ -158,14 +158,18 @@ body {
     h3 {
       margin: 0;
       display: block;
-      font: 15px "lucida_granderegular";
+      font: 15px lucida_granderegular;
       a {
         padding: 0 0 3px 0;
-        font: 16px "work_sansregular";
+        font: 16px work_sansregular;
         border-bottom: 1px solid #fedd23;
         text-decoration: none;
       }
     }
+  }
+
+  &--checkboxes {
+    width: 100%;
   }
 }
 
@@ -214,9 +218,21 @@ body {
 }
 
 .checkboxes-list {
+  @include clearfix;
   list-style: none;
+  padding: 0;
+  margin: 38px 0 0 0;
+
   &__item {
-    max-width: 220px;
+    padding: 0 0 28px 0;
+    &:nth-child(odd) {
+      width: 50%;
+      float: left;
+    }
+    &:nth-child(even) {
+      width: 47.5%;
+      float: right;
+    }
   }
 }
 
@@ -224,15 +240,15 @@ body {
   display: none;
   box-sizing: border-box;
   &:not(checked) + label:before {
-    background-position: -10px -10px;
+    background-position: -10px -9px;
   }
   &:checked + label:before {
     background-position: -69px -9px;
   }
   + label:before {
     position: relative;
-    left: 0;
-    top: 3px;
+    left: -27px;
+    top: 16px;
     content: '';
     height: 40px;
     width: 40px;
@@ -240,8 +256,13 @@ body {
     background: url(../images/checkboxes.png) no-repeat;
   }
   &__option {
-    font-weight: bold;
+    position: relative;
+    top: -15px;
+    left: 25px;
+    font: 16px work_sansregular;
     cursor: pointer;
-    text-shadow: 0 1px #000;
+    &:hover {
+      font-weight: bold;
+    }
   }
 }
