@@ -1,1 +1,5 @@
-console.log('\'Allo \'Allo!');
+let form = document.getElementById("candidateForm");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+}, true);

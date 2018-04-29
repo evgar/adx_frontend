@@ -49,97 +49,103 @@
       </div>
       <h1 class="main-title">Frond-End Developer<span class="main-title">.</span></h1>
       <h2 class="subtitle">Adyax’s core values take top priority: we care for our client, and we care for our people. Staff and clients work in partnership with consistent,  transparent communication.</h2>
-    <form class="form">
-      <fieldset class="form-block form-block--left">
-          <label class="form__label" for="name">Your name</label>
-          <input class="form__input" type="text" id="name" name="">
+    <main class="section section__main">
+      <form class="form" id="candidateForm" method="post">
+        <fieldset class="form-block form-block--left">
+            <label class="form__label" for="name">Your name</label>
+            <input class="form__input" type="text" id="name" name="">
 
-          <label class="form__label" for="email">Your email</label>
-          <input class="form__input" type="email" id="email" name="">
+            <label class="form__label" for="email">Your email</label>
+            <input class="form__input" type="email" id="email" name="">
 
-          <label class="form__label" for="link">Your portolio / github</label>
-          <input class="form__input" type="url" id="link" name="">
-        </fieldset>
+            <label class="form__label" for="link">Your portolio / github</label>
+            <input class="form__input" type="url" id="link" name="">
+          </fieldset>
 
-        <fieldset class="form-block form-block--right">
-           <label class="form__label" for="message">Message</label>
-            <textarea rows="11" id="message" class="form__textarea" name="textarea"></textarea>
+          <fieldset class="form-block form-block--right">
+             <label class="form__label" for="message">Message</label>
+              <textarea rows="11" id="message" class="form__textarea" name="textarea"></textarea>
 
-            <label class="form__label form__label--cv" for="cv"><span>CV</span><span>Choose file</span><span>Upload</span></label>
-            <input class="form__input form__input--cv" type="file" id="cv" name="dsfsdfsfews  ">
-        </fieldset>
+              <label class="form__label form__label--cv" for="cv"><span>CV</span><span>Choose file</span><span>Upload</span></label>
+              <input class="form__input form__input--cv" type="file" id="cv" name="dsfsdfsfews  ">
+          </fieldset>
 
-        <div class="clear"></div>
+          <div class="clear"></div>
 
-        <fieldset class="form-block form-block--graduated">
-          <h3>Graduated from <a href="https://htmlacademy.ru/" target="_blank">htmlacademy.ru?</a></h3>
-          <ul class="list-radio">
-            <li class="list-radio__item">
-              <input class="list-radio__answer" type="radio" id="yes" checked="checked" name="graduated">
-              <label class="list-radio__point" for="yes" for="yes">Yes</label>
+          <fieldset class="form-block form-block--graduated">
+            <h3>Graduated from <a href="https://htmlacademy.ru/" target="_blank">htmlacademy.ru?</a></h3>
+            <ul class="list-radio">
+              <li class="list-radio__item">
+                <input class="list-radio__answer" type="radio" id="yes" checked="checked" name="graduated">
+                <label class="list-radio__point" for="yes" for="yes">Yes</label>
+              </li>
+
+              <li class="list-radio__item">
+                <input class="list-radio__answer" type="radio" id="no" name="graduated">
+                <label class="list-radio__point" for="no" for="yes">No</label>
+              </li>
+            </ul>
+          </fieldset>
+
+        <fieldset class="form-block form-block--checkboxes">
+          <p class="form-block__description ">* Please mark skills you are best in, and types of tasks you are good at </p>
+          <ul class="checkboxes-list">
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="jquery" checked="checked">
+              <label class="checkbox__option" for="jquery">jQuery</label>
             </li>
-
-            <li class="list-radio__item">
-              <input class="list-radio__answer" type="radio" id="no" name="graduated">
-              <label class="list-radio__point" for="no" for="yes">No</label>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="jade">
+              <label class="checkbox__option" for="jade">Jade</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="grunt">
+              <label class="checkbox__option" for="grunt">Use GRUNT</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="stylus">
+              <label class="checkbox__option" for="stylus">Stylus</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="haml">
+              <label class="checkbox__option" for="haml">HAML</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="angular">
+              <label class="checkbox__option" for="angular">Know Angular</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="sass">
+              <label class="checkbox__option" for="sass">SASS</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="android">
+              <label class="checkbox__option" for="android">Front-end development for Android</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="less">
+              <label class="checkbox__option" for="less">LESS</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="ios">
+              <label class="checkbox__option" for="ios">Front-end development for iOS</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="cofeescript">
+              <label class="checkbox__option" for="cofeescript">CoffeeScript</label>
+            </li>
+            <li class="checkboxes-list__item">
+              <input class="checkbox" type="checkbox" id="windowsPhone">
+              <label class="checkbox__option" for="windowsPhone">Front-end development for Windows Phone</label>
             </li>
           </ul>
         </fieldset>
-
-      <fieldset class="form-block form-block--checkboxes">
-        <p class="form-block__description ">* Please mark skills you are best in, and types of tasks you are good at </p>
-        <ul class="checkboxes-list">
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="jquery" checked="checked">
-            <label class="checkbox__option" for="jquery">jQuery</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="jade">
-            <label class="checkbox__option" for="jade">Jade</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="grunt">
-            <label class="checkbox__option" for="grunt">Use GRUNT</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="stylus">
-            <label class="checkbox__option" for="stylus">Stylus</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="haml">
-            <label class="checkbox__option" for="haml">HAML</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="angular">
-            <label class="checkbox__option" for="angular">Know Angular</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="sass">
-            <label class="checkbox__option" for="sass">SASS</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="android">
-            <label class="checkbox__option" for="android">Front-end development for Android</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="less">
-            <label class="checkbox__option" for="less">LESS</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="ios">
-            <label class="checkbox__option" for="ios">Front-end development for iOS</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="cofeescript">
-            <label class="checkbox__option" for="cofeescript">CoffeeScript</label>
-          </li>
-          <li class="checkboxes-list__item">
-            <input class="checkbox" type="checkbox" id="windowsPhone">
-            <label class="checkbox__option" for="windowsPhone">Front-end development for Windows Phone</label>
-          </li>
-        </ul>
-      </fieldset>
-    </form>
+        <button type="submit" class="form-button">Submit</button>
+      </form>
+    </main>
+    <footer class="footer">
+      <p class="footer__content">Adyax specializes in working with multi-national, multi-brand companies on a wide range of customer, client and employee-facing solutions.</p>
+    </footer>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
