@@ -1,4 +1,6 @@
-@import "../styles/fonts";
+@import "fonts";
+@import "../../node_modules/breakpoint-sass/stylesheets/_breakpoint";
+//@import "breakpoint";
 $black:   #191919;
 $sun-yellow: #fedd23;
 
@@ -11,7 +13,7 @@ $sun-yellow: #fedd23;
 }
 
 .clear {
-  height:0px !important;
+  height:0 !important;
   clear:both;
   margin:0 !important;
   padding:0 !important;
@@ -49,9 +51,13 @@ body {
   color: #191919;
   font: 24px work_sansregular;
   text-align: center;
-  width: 770px;
+  max-width: 770px;
+  width: 100%;
   margin: 40px auto 0 auto;
   line-height: 43px;
+  @include breakpoint(320px 1000px) {
+    font-size: 19px;
+  }
 }
 
 .form {
@@ -59,6 +65,7 @@ body {
   margin: 140px auto 0 auto;
   padding-top: 75px;
   max-width: 947px;
+  width: 100%;
 }
 
 .form {
@@ -139,10 +146,17 @@ body {
   border: none;
   padding: 0;
   margin: 0;
+  @include breakpoint(320px 1000px) {
+    width: 95%;
+    padding: 0 20px 0 20px;
+  }
   &__description {
     font: 12px work_sanslight;
     color: #979797;
     margin: 19px 0 0 0;
+    @include breakpoint(320px 576px) {
+      text-align: center;
+    }
   }
   &--left {
     float: left;
@@ -150,167 +164,222 @@ body {
 
   &--right {
     float: right;
+    @include breakpoint(320px 1000px) {
+      float: left;
+    }
   }
 
   &--graduated {
     margin: 31px 0 0 -2px;
     width: 27%;
-    h3 {
-      margin: 0;
+    @include breakpoint(320px 1000px) {
+      margin: 0 auto 0 auto;
+      width: 50%;
+    }
+      h3 {
+        margin: 0;
+        display: block;
+        font: 15px lucida_granderegular;
+        a {
+          padding: 0 0 3px 0;
+          font: 16px work_sansregular;
+          border-bottom: 1px solid #fedd23;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &--checkboxes {
+      width: 100%;
+      @include breakpoint(577px 1000px) {
+        width: 95%;
+      }
+      @include breakpoint(320px 576px) {
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+  }
+  .list-radio {
+    @include clearfix;
+    float: left;
+    width: 65%;
+    &__item {
       display: block;
-      font: 15px lucida_granderegular;
-      a {
-        padding: 0 0 3px 0;
-        font: 16px work_sansregular;
-        border-bottom: 1px solid #fedd23;
-        text-decoration: none;
+      width: 23%;
+      text-align: right;
+      &:nth-child(odd) {
+        float: left;
+      }
+      &:nth-child(even) {
+        float: right;
+      }
+    }
+    &__answer {
+      display: none;
+      &:not(checked) + label:before {
+        background-position: -62px -10px;
+      }
+      &:checked + label:before {
+        background-position: -9px -10px;
+      }
+    }
+    &__point {
+      position: relative;
+      top: -32px;
+      font: 13px work_sansmedium;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:before {
+        position: relative;
+        top: 33px;
+        left: -40px;
+        content: '';
+        display: inline-block;
+        height: 38px;
+        width: 38px;
+        background: url(../images/options.png) no-repeat;
       }
     }
   }
 
-  &--checkboxes {
-    width: 100%;
-  }
-}
+  .checkboxes-list {
+    @include clearfix;
+    @include breakpoint(320px 576px) {
+      text-align: center;
+      margin: 70px 0 0 0;
+    }
+    list-style: none;
+    padding: 0;
+    margin: 38px 0 0 0;
 
-.list-radio {
-  @include clearfix;
-  float: left;
-  width: 65%;
-  &__item {
-    display: block;
-    width: 23%;
-    text-align: right;
-    &:nth-child(odd) {
-      float: left;
-    }
-    &:nth-child(even) {
-      float: right;
+    &__item {
+      padding: 0 0 28px 0;
+      @include breakpoint(320px 576px) {
+        margin: 20px 0 10px 0;
+      }
+      &:nth-child(odd) {
+        @include breakpoint(320px 576px) {
+          width: 100%;
+        }
+        width: 50%;
+        float: left;
+      }
+      &:nth-child(even) {
+        @include breakpoint(320px 576px) {
+          width: 100%;
+        }
+        width: 47.5%;
+        float: right;
+      }
     }
   }
-  &__answer {
+
+  .checkbox {
     display: none;
+    box-sizing: border-box;
     &:not(checked) + label:before {
-      background-position: -62px -10px;
+      background-position: -10px -9px;
     }
     &:checked + label:before {
-      background-position: -9px -10px;
+      background-position: -69px -9px;
+    }
+    + label:before {
+      position: relative;
+      left: -27px;
+      top: 16px;
+      content: '';
+      height: 40px;
+      width: 40px;
+      display: inline-block;
+      background: url(../images/checkboxes.png) no-repeat;
+      @include breakpoint(320px 576px) {
+        position: absolute;
+        left: 46%;
+        top: -44px;
+      }
+      @include breakpoint(577px 820px) {
+        left: -7%;
+        top: -2px;
+      }
+    }
+    &__option {
+      position: relative;
+      top: -15px;
+      left: 25px;
+      font: 16px work_sansregular;
+      cursor: pointer;
+      @include breakpoint(320px 820px) {
+        display: block;
+        width: 100%;
+      }
+      &:hover {
+        font-weight: bold;
+      }
     }
   }
-  &__point {
-    position: relative;
-    top: -32px;
-    font: 13px work_sansmedium;
-    text-transform: uppercase;
-    cursor: pointer;
 
+  .form-button {
+    @include breakpoint(320px 576px) {
+     margin-top: 20px;
+    }
+    display: block;
+    width: 276px;
+    height: 76px;
+    margin: 72px auto 0 auto;
+    padding: 6px 0 0 0px;
+    font: 13px work_sansbold;
+    background: #ffffff;
+    box-shadow: 0 2px 30px 0 rgba(216, 216, 216, 0.5);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    cursor: pointer;
     &:before {
       position: relative;
-      top: 33px;
-      left: -40px;
       content: '';
+      top: -2px;
+      left: -46px;
+      width: 48px;
+      height: 2px;
+      background: $black;
       display: inline-block;
-      height: 38px;
-      width: 38px;
-      background: url(../images/options.png) no-repeat;
     }
   }
-}
 
-.checkboxes-list {
-  @include clearfix;
-  list-style: none;
-  padding: 0;
-  margin: 38px 0 0 0;
-
-  &__item {
-    padding: 0 0 28px 0;
-    &:nth-child(odd) {
-      width: 50%;
-      float: left;
-    }
-    &:nth-child(even) {
-      width: 47.5%;
-      float: right;
+  .section {
+    &__main {
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 0 205px 0;
+      @include breakpoint(577px 1000px) {
+        width: 95%;
+        margin: 0 auto;
+      }
+      @include breakpoint(320px 576px) {
+        width: 95%;
+        padding-bottom: 20px;
+      }
     }
   }
-}
 
-.checkbox {
-  display: none;
-  box-sizing: border-box;
-  &:not(checked) + label:before {
-    background-position: -10px -9px;
-  }
-  &:checked + label:before {
-    background-position: -69px -9px;
-  }
-  + label:before {
-    position: relative;
-    left: -27px;
-    top: 16px;
-    content: '';
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-    background: url(../images/checkboxes.png) no-repeat;
-  }
-  &__option {
-    position: relative;
-    top: -15px;
-    left: 25px;
-    font: 16px work_sansregular;
-    cursor: pointer;
-    &:hover {
-      font-weight: bold;
+  .footer {
+    max-width: 1200px;
+    width: 100%;
+    background-color: black;
+    padding: 19% 0 21.7% 0;
+    background-image: url(../images/world-bg.png);
+    background-size: 90%;
+    background-position: center 66%;
+    background-repeat: no-repeat;
+    &__content {
+      margin: -1px auto 0 auto;
+      text-align: center;
+      color: white;
+      font: 38px avalonbold;
+      line-height: 1.35;
+      letter-spacing: normal;
+      width: 60%;
     }
   }
-}
-
-.form-button {
-  display: block;
-  width: 276px;
-  height: 76px;
-  margin: 72px auto 0 auto;
-  padding: 6px 0 0 0px;
-  font: 13px work_sansbold;
-  background: #ffffff;
-  box-shadow: 0 2px 30px 0 rgba(216, 216, 216, 0.5);
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 2.4px;
-  &:before {
-    position: relative;
-    content: '';
-    top: -2px;
-    left: -46px;
-    width: 48px;
-    height: 2px;
-    background: $black;
-    display: inline-block;
-  }
-}
-
-.section {
-  &__main {
-    padding: 0 0 205px 0;
-  }
-}
-
-.footer {
-  background-color: black;
-  padding: 181px 0 252px 0;
-  background-image: url(../images/world-bg.png);
-  background-size: 92% 74%;
-  background-position: center 66%;
-  background-repeat: no-repeat;
-  &__content {
-    margin: 48px auto 0 auto;
-    text-align: center;
-    color: white;
-    font: 38px avalonbold;
-    line-height: 1.35;
-    letter-spacing: normal;
-    width: 60%;
-  }
-}
