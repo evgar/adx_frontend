@@ -27,39 +27,29 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <header class="section section__header">
       <div class="logo">
         <img class="logo_img" src="images/logo.png" alt="Logo">
       </div>
       <h1 class="main-title">Frond-End Developer<span class="main-title">.</span></h1>
       <h2 class="subtitle">Adyax’s core values take top priority: we care for our client, and we care for our people. Staff and clients work in partnership with consistent,  transparent communication.</h2>
+    </header>
     <main class="section section__main">
       <form class="form" id="candidateForm" method="post">
         <fieldset class="form-block form-block--left">
             <label class="form__label" for="name">Your name</label>
-            <input class="form__input" type="text" id="name" name="">
+            <input class="form__input" type="text" id="name">
 
             <label class="form__label" for="email">Your email</label>
-            <input class="form__input" type="email" id="email" name="">
+            <input class="form__input" type="email" id="email">
 
             <label class="form__label" for="link">Your portolio / github</label>
-            <input class="form__input" type="url" id="link" name="">
+            <input class="form__input" type="url" id="link">
           </fieldset>
 
           <fieldset class="form-block form-block--right">
@@ -67,7 +57,7 @@
               <textarea rows="11" id="message" class="form__textarea" name="textarea"></textarea>
 
               <label class="form__label form__label--cv" for="cv"><span>CV</span><span>Choose file</span><span>Upload</span></label>
-              <input class="form__input form__input--cv" type="file" id="cv" name="dsfsdfsfews  ">
+              <input class="form__input form__input--cv" type="file" id="cv" name="Choose file ">
           </fieldset>
 
           <div class="clear"></div>
