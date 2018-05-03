@@ -1,5 +1,5 @@
-let form = document.getElementById("candidateForm");
+let form = document.getElementById('candidateForm');
 
-form.addEventListener("submit", (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
 }, true);
